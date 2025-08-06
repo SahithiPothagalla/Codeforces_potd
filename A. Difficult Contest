@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+#pragma GCC optimize("unroll-loops")
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+
+typedef long long ll;
+const int MOD = 998244353;
+
+#define SUVRAT ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+
+
+int main()
+{
+    SUVRAT
+    
+    ll t;
+    cin >> t;
+    while(t--)
+    {
+        string s;
+        cin >> s;
+        string ans, temp;
+        ll ct = 0;
+        for(ll i = 0 ; i < s.size() ; i++)
+        {
+            if(s[i] == 'T') temp.push_back(s[i]);
+            else ans.push_back(s[i]);
+        }
+
+        ans = temp + ans;
+
+        cout << ans << endl;
+        
+    }
+
+    return 0;
+}
